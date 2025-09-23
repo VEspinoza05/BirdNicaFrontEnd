@@ -1,4 +1,4 @@
-import { useLocation, Link, Outlet } from "react-router-dom"
+import { useLocation, Link, Outlet, useNavigate } from "react-router-dom"
 import BirdNicaLogo from '../assets/BirdNicaLogo.jpg'
 import {
   NavigationMenu,
@@ -6,18 +6,36 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
 } from "@/components/ui/navigation-menu"
+import { Button } from "@/components/ui/button"
 
 function MainLayout() {
   const location = useLocation()
+  const navigate = useNavigate()
 
   const navLinks = [
     { name: "Inicio", href: "/" },
     { name: "Aves", href: "/birds" },
-    { name: "Reservas", href: "/reserves" },
-    { name: "Cursos", href: "/courses" },
-    { name: "Calendario", href: "/calendar" },
-    { name: "Contacto", href: "/contact" },
   ]
+
+  const moveToLink = (direction: string) => {
+    const currentPosition = navLinks.findIndex(link => link.href === location.pathname)
+    let goTo
+
+    if(direction === "previous") {
+      goTo = currentPosition - 1
+      if (goTo <= -1) 
+        goTo = navLinks.length - 1 
+    }
+    else if(direction === "next") {
+      goTo = currentPosition + 1
+      if (goTo >= navLinks.length) 
+        goTo = 0
+    }
+    else
+      return "invalid parameter"
+
+    return navLinks[goTo].href
+  }
 
   return (
     <div className="flex flex-col h-screen">
@@ -47,9 +65,25 @@ function MainLayout() {
           </NavigationMenu>
         </nav>
       </header>
-      <main className="bg-[url('https://www.rwandawildlifesafari.com/wp-content/uploads/2024/04/lake-kivu-rwanda-750x450-1.jpg')] bg-cover bg-center h-full w-full">
-        <Outlet />
-      </main>
+      <div className="flex bg-[url('https://www.rwandawildlifesafari.com/wp-content/uploads/2024/04/lake-kivu-rwanda-750x450-1.jpg')] bg-cover bg-center h-full w-full">
+        <aside className="w-1/3">
+        <Button
+          onClick={() => navigate(moveToLink("previous"))}
+        >
+          Previous
+        </Button>
+        </aside>
+        <main className="w-full">
+          <Outlet />
+        </main>
+        <aside className="w-1/3">
+          <Button
+            onClick={() => navigate(moveToLink("next"))}
+          >
+            Next
+          </Button>  
+        </aside>
+      </div>
     </div>
   )
 }
