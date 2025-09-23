@@ -1,12 +1,14 @@
 type ArticleProps = {
   name: string,
   picturePath: string,
+  onClick: React.MouseEventHandler<HTMLButtonElement>,
 }
 
-const Article = ({name, picturePath} : ArticleProps) => {
+const Article = ({name, picturePath, onClick} : ArticleProps) => {
   return(
     <article
       className="relative shadow-md rounded-xl overflow-hidden hover:scale-105 transition-transform"
+      onClick={onClick}
     >
       <img
         src={picturePath}
