@@ -6,7 +6,6 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
 } from "@/components/ui/navigation-menu"
-import { Button } from "@/components/ui/button"
 import { BsArrowLeftCircle, BsArrowRightCircle } from 'react-icons/bs';
 
 
@@ -67,24 +66,28 @@ function MainLayout() {
           </NavigationMenu>
         </nav>
       </header>
-      <div className="flex bg-[url('https://www.rwandawildlifesafari.com/wp-content/uploads/2024/04/lake-kivu-rwanda-750x450-1.jpg')] bg-cover bg-center h-full w-full">
-        <aside className="w-1/3 flex justify-center items-center">
-          <BsArrowLeftCircle
-            size={96}
-            className="cursor-pointer text-white hover:text-gray-300"
-            onClick={() => navigate(moveToLink("previous"))}
-          />
-        </aside>
-        <main className="w-full">
-          <Outlet />
-        </main>
-        <aside className="w-1/3 flex justify-center items-center">
-          <BsArrowRightCircle
-            size={96}
-            className="cursor-pointer text-white hover:text-gray-300"
-            onClick={() => navigate(moveToLink("next"))}
-          />
-        </aside>
+      <div className="relative flex bg-[url('https://www.rwandawildlifesafari.com/wp-content/uploads/2024/04/lake-kivu-rwanda-750x450-1.jpg')] bg-cover bg-center h-full w-full ">
+        <div className="absolute inset-0 bg-black/50"></div>
+        
+        <div className="relative z-10 text-white flex w-full">
+          <aside className="w-1/3 flex justify-center items-center">
+            <BsArrowLeftCircle
+              size={96}
+              className="cursor-pointer text-white hover:text-gray-300"
+              onClick={() => navigate(moveToLink("previous"))}
+            />
+          </aside>
+          <main className="w-full">
+            <Outlet />
+          </main>
+          <aside className="w-1/3 flex justify-center items-center">
+            <BsArrowRightCircle
+              size={96}
+              className="cursor-pointer text-white hover:text-gray-300"
+              onClick={() => navigate(moveToLink("next"))}
+            />
+          </aside>
+        </div>
       </div>
     </div>
   )
