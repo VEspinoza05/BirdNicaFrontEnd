@@ -16,6 +16,7 @@ function MainLayout() {
   const navLinks = [
     { name: "Inicio", href: "/" },
     { name: "Aves", href: "/birds" },
+    { name: "Reservas", href: "/reserves" },
   ]
 
   const moveToLink = (direction: string) => {
