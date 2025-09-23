@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom"
 function ReservesPage() {
   const navigate = useNavigate();
 
-  const handleGoToInfo = () => {
-    navigate('/reserveinfo')
+  const handleGoToInfo = (reserve: any) => {
+    navigate('/reserveinfo', { state: reserve })
   }
 
   return (
@@ -17,7 +17,7 @@ function ReservesPage() {
             key={reserve.id}
             name={reserve.name}
             picturePath={reserve.picture}
-            onClick={handleGoToInfo}
+            onClick={() => handleGoToInfo(reserve)}
           />
         ))}
       </div>
