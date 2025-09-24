@@ -6,7 +6,14 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
 } from "@/components/ui/navigation-menu"
-import { BsArrowLeftCircle, BsArrowRightCircle } from 'react-icons/bs';
+import {
+  BsArrowLeftCircle,
+  BsArrowRightCircle,
+  BsTwitterX,
+  BsFacebook,
+  BsInstagram
+} from 'react-icons/bs';
+import { AiFillMail } from 'react-icons/ai';
 
 
 function MainLayout() {
@@ -90,6 +97,16 @@ function MainLayout() {
           </aside>
         </div>
       </div>
+      <footer className="flex place-content-between bg-[#304F47] text-white p-2 border-solid border-t-2 border-white">
+        <div className="flex items-center gap-2">
+          <AiFillMail size={22} /> contacto@birdnica.com 
+        </div>
+        <div className="flex items-center gap-4">
+          <BsFacebook size={22}/>
+          <BsTwitterX size={22}/>
+          <BsInstagram size={22}/>
+        </div>
+      </footer>
     </div>
   )
 }
