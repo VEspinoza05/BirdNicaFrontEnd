@@ -1,4 +1,5 @@
 import { useLocation } from 'react-router-dom';
+import Article from "@/components/ui/article"
 
 function ReserveInfo () {
   const location = useLocation();
@@ -39,6 +40,18 @@ function ReserveInfo () {
       </div>
       <div className='mt-6'>
         {reserveData.Description}
+      </div>
+      <div>
+        <h1 className="text-2xl font-bold my-4">Aves endémicas</h1>
+        <div className="grid grid-cols-3 gap-4">
+          {reserveData.birds.map((bird: any) => (
+            <Article
+              key={bird.id}
+              name={bird.name}
+              picturePath={bird.picture}
+            />
+          ))}
+        </div>
       </div>
     </div>
   )
