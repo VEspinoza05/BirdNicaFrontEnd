@@ -74,7 +74,7 @@ function MainLayout() {
           </NavigationMenu>
         </nav>
       </header>
-      <div className="relative flex bg-[url('https://www.rwandawildlifesafari.com/wp-content/uploads/2024/04/lake-kivu-rwanda-750x450-1.jpg')] bg-cover bg-center h-full w-full ">
+      <div className="relative flex bg-[url('https://www.rwandawildlifesafari.com/wp-content/uploads/2024/04/lake-kivu-rwanda-750x450-1.jpg')] bg-cover bg-center h-full w-full">
         <div className="absolute inset-0 bg-black/50"></div>
         
         <div className="relative z-10 text-white flex w-full">

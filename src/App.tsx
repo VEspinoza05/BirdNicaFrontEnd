@@ -4,6 +4,7 @@ import BirdsPage from './pages/BirdsPage'
 import ReservesPage from './pages/ReservesPage'
 import MainLayout from './layouts/MainLayout'
 import ReserveInfo from './pages/ReserveInfo'
+import "leaflet/dist/leaflet.css";
 
 function App() {
   return (

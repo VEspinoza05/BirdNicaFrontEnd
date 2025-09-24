@@ -1,12 +1,13 @@
 import { useLocation } from 'react-router-dom';
 import Article from "@/components/ui/article"
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 function ReserveInfo () {
   const location = useLocation();
   const reserveData = location.state || {};
 
   return (
-    <div className="p-6 h-full bg-[#304F47]">
+    <div className="p-6 h-full bg-[#304F47] overflow-auto">
       <div className='flex gap-4'>
         <div className='w-1/2 flex items-center justify-center'>
           <img
@@ -40,6 +41,27 @@ function ReserveInfo () {
       </div>
       <div className='mt-6'>
         {reserveData.Description}
+      </div>
+      <div>
+        <h1 className="text-2xl font-bold my-4">Ubicación</h1>
+        <MapContainer
+          center={[reserveData.latitude,reserveData.longitude]}
+          zoom={10}
+          className='w-full h-[400px]'
+        >
+          <TileLayer
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          />
+
+          <Marker position={[reserveData.latitude,reserveData.longitude]}>
+            <Popup>
+              <strong>{reserveData.name}</strong><br />
+              Division: {reserveData.division}
+            </Popup>
+          </Marker>
+        </MapContainer>
+
       </div>
       <div>
         <h1 className="text-2xl font-bold my-4">Aves endémicas</h1>
