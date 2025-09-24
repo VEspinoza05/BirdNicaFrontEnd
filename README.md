@@ -1,69 +1,47 @@
-# React + TypeScript + Vite
+# 🐦 BirdNica Front End
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Inicio de BirdNica](./public/InicioBirdNica.jpeg)
 
-Currently, two official plugins are available:
+**BirdNica** es una plataforma de aviturismo enfocada en Nicaragua.  
+Su propósito es permitir la reservaciones en línea, brindar información sobre aves, reservas naturales, temporadas y eventos especiales, y recursos educativos para entusiastas, turistas y especialistas. Esto ayuda a fomentar el ecoturismo y la conservación.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ⚙️ Funcionalidades
+- Catálogo de aves e informacion de las mismas (datos generales, distribución en el mapa, reservas en las que habitan)
+- Catálogo de reservas naturales además de su información (datos generales, ubicación en el mapa, aves que habitan)
+- Registro de usuario
+- Módulo educativo sobre conservación y buenas prácticas
+- Reservaciones en línea para contratación de guias
+- Calendario de temporadas de avistamiento y eventos especiales
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📦 Ejecución
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Clona el repositorio:
+```bash
+  git clone https://github.com/VEspinoza05/BirdNicaFrontEnd.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Accede a la carpeta del proyecto:
+```bash
+  cd birdnica
 ```
+
+3. Instala las dependencias:
+```bash
+  npm install
+```
+
+4. Ejecuta el proyecto:
+```bash
+  npm run dev
+```
+
+## 📖 Tecnologías utilizadas
+- [React](https://react.dev/) (Framework Web)
+- [TypeScript](https://www.typescriptlang.org/) (Lenguaje de programación tipado) 
+- [Vite](https://vitejs.dev/) (Creación de proyecto)
+- [TailwindCSS](https://tailwindcss.com/) (Estilo)
+- [React Leaflet](https://react-leaflet.js.org/) (Mapas interactivos)
+- [Shadcn](https://ui.shadcn.com/) (Componentes de UI)
+
