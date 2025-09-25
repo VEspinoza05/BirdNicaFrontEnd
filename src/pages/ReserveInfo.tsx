@@ -71,6 +71,7 @@ function ReserveInfo () {
               key={bird.id}
               name={bird.name}
               picturePath={bird.picture}
+              onClick={() => {}} /*  Temporal empty event */
             />
           ))}
         </div>

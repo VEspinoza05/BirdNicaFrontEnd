@@ -55,6 +55,7 @@ function BirdInfo() {
               key={reserve.id}
               name={reserve.name}
               picturePath={reserve.picture}
+              onClick={() => {}} /*  Temporal empty event */
             />
           ))}
         </div>
