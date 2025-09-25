@@ -9,11 +9,11 @@ import LaPalestina from "./imgs/LaPalestina.png";
 import LosGuatuzos from "./imgs/LosGuatuzos.png";
 
 export const birds = [
-  { id: 1, name: "Lorem ipsum", picture: A },
-  { id: 2, name: "Lorem ipsum", picture: B },
-  { id: 3, name: "Lorem ipsum", picture: C },
-  { id: 4, name: "Lorem ipsum", picture: D },
-  { id: 5, name: "Lorem ipsum", picture: E },
+  { id: 1, name: "Rabijunco etéreo", picture: A },
+  { id: 2, name: "Zampullín de pico grueso", picture: B },
+  { id: 3, name: "Paujil", picture: C },
+  { id: 4, name: "Tinamú grande", picture: D },
+  { id: 5, name: "Jabirú", picture: E },
   { id: 6,
     name: "Cerceta colorada",
     scientificName: "Spatula cyanoptera",
