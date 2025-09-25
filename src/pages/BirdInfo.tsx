@@ -37,6 +37,9 @@ function BirdInfo() {
           </div>
         </div>
       </div>
+      <div className='mt-6'>
+        {birdData.description}
+      </div>
     </div>
   )
 }
