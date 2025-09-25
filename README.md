@@ -7,6 +7,9 @@ Su propósito es permitir la reservaciones en línea, brindar información sobre
 
 ---
 
+## 📖 Guía Rápida
+Hemos creado una guía rápida en formato PDF, para que puedas saber sobre como hacer uso del portal, puedes ver el manual haciendo clic en este enlace: https://drive.google.com/file/d/1xd4dhh_DfiSYjx7l0ImXb-UrrMKXWTcN/view?usp=drive_link 
+
 ## ⚙️ Funcionalidades
 - Catálogo de aves e informacion de las mismas (datos generales, distribución en el mapa, reservas en las que habitan)
 - Catálogo de reservas naturales además de su información (datos generales, ubicación en el mapa, aves que habitan)
@@ -44,4 +47,4 @@ Su propósito es permitir la reservaciones en línea, brindar información sobre
 - [TailwindCSS](https://tailwindcss.com/) (Estilo)
 - [React Leaflet](https://react-leaflet.js.org/) (Mapas interactivos)
 - [Shadcn](https://ui.shadcn.com/) (Componentes de UI)
-
+- [React Icons](https://www.react-icons.com/) (Librería de iconos)
