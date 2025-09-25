@@ -79,21 +79,31 @@ function MainLayout() {
         
         <div className="relative z-10 text-white flex w-full">
           <aside className="w-1/3 flex justify-center items-center">
-            <BsArrowLeftCircle
+            <div className="flex flex-col h-full w-4/5 py-8 items-center gap-4">
+              <div className="h-full w-full bg-gray-300 flex justify-center items-center text-4xl font-bold">
+                <h1 className=" text-black">Publicidad</h1>
+              </div>
+              <BsArrowLeftCircle
               size={96}
               className="cursor-pointer text-white hover:text-gray-300"
               onClick={() => navigate(moveToLink("previous"))}
             />
+            </div>
           </aside>
           <main className="w-full overflow-y-auto">
             <Outlet />
           </main>
           <aside className="w-1/3 flex justify-center items-center">
-            <BsArrowRightCircle
+            <div className="flex flex-col h-full w-4/5 py-8 items-center gap-4">
+              <div className="h-full w-full bg-gray-300 flex justify-center items-center text-4xl font-bold">
+                <h1 className=" text-black">Publicidad</h1>
+              </div>
+              <BsArrowRightCircle
               size={96}
               className="cursor-pointer text-white hover:text-gray-300"
               onClick={() => navigate(moveToLink("next"))}
             />
+            </div>
           </aside>
         </div>
       </div>
