@@ -9,7 +9,6 @@ type BirdAreaMapProps = {
 const BirdAreaMap = ({ species, area }: BirdAreaMapProps) => {
   return (
     <div>
-      <h2 className="text-xl font-bold mb-2">Área de distribución: {species}</h2>
 
       <MapContainer
         center={[12.8654, -85.2072]}

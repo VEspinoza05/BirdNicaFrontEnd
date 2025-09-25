@@ -44,7 +44,7 @@ function BirdInfo() {
       </div>
       <div>
         <h1 className="text-2xl font-bold my-4">Distribución</h1>
-        <BirdAreaMap species="Garza blanca" area={birdData.birdArea} />
+        <BirdAreaMap species={birdData.name} area={birdData.birdArea} />
 
       </div>
       <div>
