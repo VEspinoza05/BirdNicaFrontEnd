@@ -18,23 +18,23 @@ function ReserveInfo () {
         </div>
         <div className="w-1/2 flex flex-col gap-2">
           <div className="grid grid-cols-2">
-            <h2>Nombre:</h2>
+            <h2 className="font-bold">Nombre:</h2>
             <p>{reserveData.name}</p>
           </div>
           <div className="grid grid-cols-2">
-            <h2>Division:</h2>
+            <h2 className="font-bold">Division:</h2>
             <p>{reserveData.division}</p>
           </div>
           <div className="grid grid-cols-2">
-            <h2>Superficie:</h2>
+            <h2 className="font-bold">Superficie:</h2>
             <p>{reserveData.surface}</p>
           </div>
           <div className="grid grid-cols-2">
-            <h2>Coordenadas:</h2>
+            <h2 className="font-bold">Coordenadas:</h2>
             <p>{reserveData.coordinates}</p>
           </div>
           <div className="grid grid-cols-2">
-            <h2>Pais:</h2>
+            <h2 className="font-bold">Pais:</h2>
             <p>{reserveData.country}</p>
           </div>
         </div>

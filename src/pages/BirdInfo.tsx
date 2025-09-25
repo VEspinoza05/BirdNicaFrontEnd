@@ -18,23 +18,23 @@ function BirdInfo() {
         </div>
         <div className="w-1/2 flex flex-col gap-2">
           <div className="grid grid-cols-2">
-            <h2>Nombre común:</h2>
+            <h2 className="font-bold">Nombre común:</h2>
             <p>{birdData.name}</p>
           </div>
           <div className="grid grid-cols-2">
-            <h2>Nombre científico:</h2>
+            <h2 className="font-bold">Nombre científico:</h2>
             <p>{birdData.scientificName}</p>
           </div>
           <div className="grid grid-cols-2">
-            <h2>Orden:</h2>
+            <h2 className="font-bold">Orden:</h2>
             <p>{birdData.order}</p>
           </div>
           <div className="grid grid-cols-2">
-            <h2>Familia:</h2>
+            <h2 className="font-bold">Familia:</h2>
             <p>{birdData.family}</p>
           </div>
           <div className="grid grid-cols-2">
-            <h2>Género:</h2>
+            <h2 className="font-bold">Género:</h2>
             <p>{birdData.genus}</p>
           </div>
         </div>
