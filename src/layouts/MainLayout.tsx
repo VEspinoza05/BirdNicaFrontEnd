@@ -48,7 +48,7 @@ function MainLayout() {
 
   return (
     <div className="flex flex-col h-screen">
-      <header className="p-[8px]">
+      <header className="p-[8px] shrink-0">
         <nav className="w-full flex">
           <img className="w-24 h-24" src={BirdNicaLogo} alt="Logo de BirdNica"/>
           <NavigationMenu>
@@ -74,7 +74,7 @@ function MainLayout() {
           </NavigationMenu>
         </nav>
       </header>
-      <div className="relative flex bg-[url('https://www.rwandawildlifesafari.com/wp-content/uploads/2024/04/lake-kivu-rwanda-750x450-1.jpg')] bg-cover bg-center h-full w-full">
+      <div className="relative flex-1 min-h-0 flex bg-[url('https://www.rwandawildlifesafari.com/wp-content/uploads/2024/04/lake-kivu-rwanda-750x450-1.jpg')] bg-cover bg-center">
         <div className="absolute inset-0 bg-black/50"></div>
         
         <div className="relative z-10 text-white flex w-full">
@@ -85,7 +85,7 @@ function MainLayout() {
               onClick={() => navigate(moveToLink("previous"))}
             />
           </aside>
-          <main className="w-full">
+          <main className="w-full overflow-y-auto">
             <Outlet />
           </main>
           <aside className="w-1/3 flex justify-center items-center">
@@ -97,7 +97,7 @@ function MainLayout() {
           </aside>
         </div>
       </div>
-      <footer className="flex place-content-between bg-[#304F47] text-white p-2 border-solid border-t-2 border-white">
+      <footer className="shrink-0 flex place-content-between bg-[#304F47] text-white p-2 border-solid border-t-2 border-white">
         <div className="flex items-center gap-2">
           <AiFillMail size={22} /> contacto@birdnica.com 
         </div>

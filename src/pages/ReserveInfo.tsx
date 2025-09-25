@@ -7,7 +7,7 @@ function ReserveInfo () {
   const reserveData = location.state || {};
 
   return (
-    <div className="p-6 h-full bg-[#304F47] overflow-auto">
+    <div className="p-6 bg-[#304F47] min-h-full">
       <div className='flex gap-4'>
         <div className='w-1/2 flex items-center justify-center'>
           <img
