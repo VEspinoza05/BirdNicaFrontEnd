@@ -3,7 +3,7 @@ import B from "./imgs/B.png";
 import C from "./imgs/C.png";
 import D from "./imgs/D.png";
 import E from "./imgs/E.png";
-import F from "./imgs/F.png";
+import CercetaColorada from "./imgs/CercetaColorada.png";
 
 export const birds = [
   { id: 1, name: "Lorem ipsum", picture: A },
@@ -11,5 +11,13 @@ export const birds = [
   { id: 3, name: "Lorem ipsum", picture: C },
   { id: 4, name: "Lorem ipsum", picture: D },
   { id: 5, name: "Lorem ipsum", picture: E },
-  { id: 6, name: "Lorem ipsum", picture: F },
+  { id: 6,
+    name: "Cerceta colorada",
+    scientificName: "Spatula cyanoptera",
+    order: "Anseriformes",
+    family: "Anatidae",
+    genus: "Spatula",
+    description: "El pato colorado (Spatula cyanoptera anteriormente Anas cyanoptera), llamado también cerceta colorada (en Perú), cerceta canela, cerceta castaña, pato canelo o pato acanelado, es una especie de ave endémica de América. No se debe confundir con el otro pato colorado (Netta rufina). Su área de distribución geográfica abarca desde el sur de Canadá hasta Tierra del Fuego. También está presente en las Islas Malvinas.",
+    picture: CercetaColorada,
+  },
 ];
