@@ -1,5 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import Article from "@/components/ui/article"
+import BirdAreaMap from '@/components/ui/bird-area-map';
 
 function BirdInfo() {
   const location = useLocation();
@@ -40,6 +41,11 @@ function BirdInfo() {
       </div>
       <div className='mt-6'>
         {birdData.description}
+      </div>
+      <div>
+        <h1 className="text-2xl font-bold my-4">Distribución</h1>
+        <BirdAreaMap species="Garza blanca" area={birdData.birdArea} />
+
       </div>
       <div>
         <h1 className="text-2xl font-bold my-4">Reservas en las que habita</h1>
