@@ -1,10 +1,11 @@
 import { useLocation } from 'react-router-dom';
 import Article from "@/components/ui/article"
 import BirdAreaMap from '@/components/ui/bird-area-map';
+import type { IBirdModel } from '@/models/models';
 
 function BirdInfo() {
   const location = useLocation();
-  const birdData = location.state || {};
+  const birdData: IBirdModel = location.state || {};
 
   return(
     <div className="p-6 bg-[#304F47] min-h-full">
