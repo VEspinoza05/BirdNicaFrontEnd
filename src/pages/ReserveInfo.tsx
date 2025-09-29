@@ -1,10 +1,11 @@
 import { useLocation } from 'react-router-dom';
 import Article from "@/components/ui/article"
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import type { IReserveModel } from '@/models/models';
 
 function ReserveInfo () {
   const location = useLocation();
-  const reserveData = location.state || {};
+  const reserveData: IReserveModel = location.state || {};
 
   return (
     <div className="p-6 bg-[#304F47] min-h-full">

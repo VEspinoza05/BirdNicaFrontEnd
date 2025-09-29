@@ -1,11 +1,12 @@
 import { reserves } from "../mocks/reservesData"
 import Article from "@/components/ui/article"
 import { useNavigate } from "react-router-dom"
+import type { IReserveModel } from "@/models/models";
 
 function ReservesPage() {
   const navigate = useNavigate();
 
-  const handleGoToInfo = (reserve: any) => {
+  const handleGoToInfo = (reserve: IReserveModel) => {
     navigate('/reserveinfo', { state: reserve })
   }
 

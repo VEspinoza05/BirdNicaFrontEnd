@@ -16,3 +16,23 @@ interface BasicReservesData {
   name: string,
   picture: string,
 }
+
+export interface IReserveModel{
+  id: number,
+  name: string,
+  picture: string,
+  division: string,
+  surface: string,
+  coordinates: string,
+  latitude: number,
+  longitude: number,
+  country: string,
+  Description: string,
+  birds: Array<BasicBirdsData>,
+}
+
+interface BasicBirdsData {
+  id: number,
+  name: string,
+  picture: string,
+}
